@@ -1,6 +1,6 @@
 ﻿namespace OOPArv;
 
-public enum AnimalsEnum
+public enum AnimalSpecies
 {
     Leopard,
     Tiger,
