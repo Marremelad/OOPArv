@@ -25,6 +25,11 @@ public class Leopard : Animal
         Console.WriteLine($"{Name} the {Species} is sleeping...");
     }
 
+    public override void Pet()
+    {
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to bite you!");
+    }
+    
     public void Climb()
     {
         Console.WriteLine($"{Name} the {Species} climbs a tree.");
@@ -56,7 +61,12 @@ public class Tiger : Animal
     {
         Console.WriteLine($"{Name} the {Species} is sleeping...");
     }
-
+    
+    public override void Pet()
+    {
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to bite you!");
+    }
+    
     public void SharpenClaws()
     {
         Console.WriteLine($"{Name} the {Species} is sharpening its claws");
