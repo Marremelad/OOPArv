@@ -2,13 +2,13 @@
 
 public abstract class Animal
 {
-    public string Species { get; set; }
+    public AnimalSpecies Species { get; set; }
     public string Name { get; set; }
     public string Color { get; set; }   
     public int NumberOfLegs { get; set; }
     public bool LikesHumans { get; set; }
 
-    public Animal(string species, string name, string color, int numberOfLegs, bool likesHumans)
+    public Animal(AnimalSpecies species, string name, string color, int numberOfLegs, bool likesHumans)
     {
         Species = species;
         Name = name;
