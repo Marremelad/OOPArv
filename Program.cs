@@ -8,6 +8,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Leopard leopard = new Leopard("Bruce", "Yellow and black", 4, true, 500);
+        
+        leopard.DisplayAnimal();
+        leopard.MakeSound();
+        leopard.Sleep();
+        leopard.Climb();
     }
 }
