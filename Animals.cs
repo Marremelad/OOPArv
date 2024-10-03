@@ -190,3 +190,9 @@ public class Wolf : Animal
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and growls at you!");
     }
 }
+
+public class Puppy : Wolf
+{
+    public TYPE Type { get; set; }
+}
+
