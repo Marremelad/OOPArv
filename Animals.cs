@@ -11,7 +11,7 @@ public class Leopard : Animal
     }
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Species} is showing of his {NumberOfSpots} spots.");
+        Console.WriteLine($"{Name} the {Age} year {Species} is showing of his {NumberOfSpots} spots.");
     }
 
     public override void MakeSound()
