@@ -4,11 +4,11 @@ public abstract class Animal
 {
     public AnimalSpecies Species { get; set; }
     public string Name { get; set; }
-    public string Color { get; set; }   
+    public Color Color { get; set; }   
     public int Age { get; set; }
     public bool LikesHumans { get; set; }
 
-    public Animal(AnimalSpecies species, string name, string color, int age, bool likesHumans)
+    public Animal(AnimalSpecies species, string name, Color color, int age, bool likesHumans)
     {
         Species = species;
         Name = name;
@@ -28,7 +28,7 @@ public class Leopard : Animal
 {
     public int NumberOfSpots { get; set; }
 
-    public Leopard(string name, string color, int age, bool likesHumans, int numberOfSpots) :
+    public Leopard(string name, Color color, int age, bool likesHumans, int numberOfSpots) :
         base(AnimalSpecies.Leopard, name, color, age, likesHumans)
     {
         NumberOfSpots = numberOfSpots;
@@ -64,7 +64,7 @@ public class Tiger : Animal
 {
     public int NumberOfStripes { get; set; }
 
-    public Tiger(string name, string color, int age, bool likesHumans, int numberOfStripes) :
+    public Tiger(string name, Color color, int age, bool likesHumans, int numberOfStripes) :
         base(AnimalSpecies.Tiger, name, color, age, likesHumans)
     {
         NumberOfStripes = numberOfStripes;
@@ -101,7 +101,7 @@ public class Elephant : Animal
 {
     public int Weight { get; set; }
     
-    public Elephant(string name, string color, int age, bool likesHumans, int weight) :
+    public Elephant(string name, Color color, int age, bool likesHumans, int weight) :
         base(AnimalSpecies.Elephant, name, color, age, likesHumans)
     {
         Weight = weight;
@@ -133,7 +133,7 @@ public class Zebra : Animal
 {
     public int Speed { get; set; }
     
-    public Zebra(string name, string color, int age, bool likesHumans, int speed) :
+    public Zebra(string name, Color color, int age, bool likesHumans, int speed) :
         base(AnimalSpecies.Zebra, name, color, age, likesHumans)
     {
         Speed = speed;
@@ -162,9 +162,9 @@ public class Zebra : Animal
 
 public class Wolf : Animal
 {
-    public string EyeColor { get; set; }
+    public Color EyeColor { get; set; }
     
-    public Wolf(string name, string color, int age, bool likesHumans, string eyeColor) :
+    public Wolf(string name, Color color, int age, bool likesHumans, Color eyeColor) :
         base(AnimalSpecies.Wolf, name, color, age, likesHumans)
     {
         EyeColor = eyeColor;
