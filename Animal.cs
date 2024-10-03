@@ -20,4 +20,5 @@ public abstract class Animal
     public abstract void DisplayAnimal();
     public abstract void MakeSound();
     public abstract void Sleep();
+    public abstract void Pet();
 }
