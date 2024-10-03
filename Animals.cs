@@ -72,3 +72,36 @@ public class Tiger : Animal
         Console.WriteLine($"{Name} the {Species} is sharpening its claws");
     }
 }
+
+public class Elephant : Animal
+{
+    public int Weight { get; set; }
+    
+    public Elephant(string name, string color, int age, bool likesHumans, int weight) :
+        base(AnimalSpecies.Elephant, name, color, age, likesHumans)
+    {
+        Weight = weight;
+    }
+    
+    public override void DisplayAnimal()
+    {
+        Console.WriteLine($"{Name} the {Age} year {Species} is swinging around its weight {Weight}kg.");
+    }
+        
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name} the {Species} makes a trumpet like sound!!!");
+    }
+        
+    public override void Sleep()
+    {
+        Console.WriteLine($"{Name} the {Species} is sleeping...");
+    }
+    
+    public override void Pet()
+    {
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to stomp on you!");
+    }
+    
+    
+}
