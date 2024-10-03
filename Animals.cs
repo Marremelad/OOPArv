@@ -64,7 +64,7 @@ public class Tiger : Animal
     
     public override void Pet()
     {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to bite you!");
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to scratch you!");
     }
     
     public void SharpenClaws()
@@ -73,6 +73,7 @@ public class Tiger : Animal
     }
 }
 
+// Elephant class.
 public class Elephant : Animal
 {
     public int Weight { get; set; }
@@ -103,5 +104,36 @@ public class Elephant : Animal
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to stomp on you!");
     }
     
+}
+
+public class Zebra : Animal
+{
+    public int Speed { get; set; }
+    
+    public Zebra(string name, string color, int age, bool likesHumans, int speed) :
+        base(AnimalSpecies.Elephant, name, color, age, likesHumans)
+    {
+        Speed = speed;
+    }
+    
+    public override void DisplayAnimal()
+    {
+        Console.WriteLine($"{Name} the {Age} year {Species} is running around at a speed of {Speed}km/h.");
+    }
+        
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name} the {Species} brays!!!");
+    }
+        
+    public override void Sleep()
+    {
+        Console.WriteLine($"{Name} the {Species} is sleeping...");
+    }
+    
+    public override void Pet()
+    {
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to kick you!");
+    }
     
 }
