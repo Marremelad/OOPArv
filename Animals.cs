@@ -1,5 +1,28 @@
 ﻿namespace OOPArv;
 
+public abstract class Animal
+{
+    public AnimalSpecies Species { get; set; }
+    public string Name { get; set; }
+    public string Color { get; set; }   
+    public int Age { get; set; }
+    public bool LikesHumans { get; set; }
+
+    public Animal(AnimalSpecies species, string name, string color, int age, bool likesHumans)
+    {
+        Species = species;
+        Name = name;
+        Color = color;
+        Age = age;
+        LikesHumans = likesHumans;
+    }
+
+    public abstract void DisplayAnimal();
+    public abstract void MakeSound();
+    public abstract void Sleep();
+    public abstract void Pet();
+}
+
 // Leopard Class.
 public class Leopard : Animal
 {
@@ -111,7 +134,7 @@ public class Zebra : Animal
     public int Speed { get; set; }
     
     public Zebra(string name, string color, int age, bool likesHumans, int speed) :
-        base(AnimalSpecies.Elephant, name, color, age, likesHumans)
+        base(AnimalSpecies.Zebra, name, color, age, likesHumans)
     {
         Speed = speed;
     }
@@ -135,5 +158,35 @@ public class Zebra : Animal
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to kick you!");
     }
+}
+
+public class Wolf : Animal
+{
+    public string EyeColor { get; set; }
     
+    public Wolf(string name, string color, int age, bool likesHumans, string eyeColor) :
+        base(AnimalSpecies.Wolf, name, color, age, likesHumans)
+    {
+        EyeColor = eyeColor;
+    }
+    
+    public override void DisplayAnimal()
+    {
+        Console.WriteLine($"{Name} the {Age} year {Species} is looking at you with its {EyeColor} eyes.");
+    }
+        
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name} the {Species} Howls!!!");
+    }
+        
+    public override void Sleep()
+    {
+        Console.WriteLine($"{Name} the {Species} is sleeping...");
+    }
+    
+    public override void Pet()
+    {
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and growls at you!");
+    }
 }
