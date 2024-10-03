@@ -35,7 +35,7 @@ public class Leopard : Animal
     }
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year {Species} is showing of his {NumberOfSpots} spots.");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of his {NumberOfSpots} spots.");
     }
 
     public override void MakeSound()
@@ -72,7 +72,7 @@ public class Tiger : Animal
 
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year {Species} is showing of its {NumberOfStripes} spots.");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of its {NumberOfStripes} spots.");
     }
         
     public override void MakeSound()
@@ -109,7 +109,7 @@ public class Elephant : Animal
     
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year {Species} is swinging around its weight {Weight}kg.");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is swinging around its weight {Weight}kg.");
     }
         
     public override void MakeSound()
@@ -141,7 +141,7 @@ public class Zebra : Animal
     
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year {Species} is running around at a speed of {Speed}km/h.");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is running around at a speed of {Speed}km/h.");
     }
         
     public override void MakeSound()
@@ -172,7 +172,7 @@ public class Wolf : Animal
     
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year {Species} is looking at you with its {EyeColor} eyes.");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is looking at you with its {EyeColor} eyes.");
     }
         
     public override void MakeSound()
