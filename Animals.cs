@@ -193,6 +193,37 @@ public class Wolf : Animal
 
 public class Puppy : Wolf
 {
-    public TYPE Type { get; set; }
+    private int _age;
+    public Size Size { get; set; }
+
+    public Puppy(string name, Color color, int age, bool likesHumans, Color eyeColor, Size size) :
+        base(name, color, age, likesHumans, eyeColor)
+    {
+        Name = name;
+        Color = color;
+        Age = age;
+        LikesHumans = likesHumans;
+        EyeColor = eyeColor;
+        Size = size;
+    }
+
+    public new int Age
+    {
+        get => _age;
+        set
+        {
+            if (value is < 0 or > 2)
+            {
+                Console.WriteLine("A puppy's age must be in the range of 0 and 2.");
+                _age = 1;
+            }
+            else _age = value;
+        }
+    }
+
+    public void PuppySize()
+    { 
+        Console.WriteLine($"{Name} the {Species} is a {Size} little Puppy");
+    }
 }
 
