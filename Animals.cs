@@ -4,22 +4,41 @@ public abstract class Animal
 {
     public AnimalSpecies Species { get; set; }
     public string Name { get; set; }
-    public Color Color { get; set; }   
-    public int Age { get; set; }
+    protected int Age;
+    public Color Color { get; set; }
     public bool LikesHumans { get; set; }
 
-    public Animal(AnimalSpecies species, string name, Color color, int age, bool likesHumans)
+    public Animal(AnimalSpecies species, string name, int age, Color color, bool likesHumans)
     {
         Species = species;
         Name = name;
         Color = color;
-        Age = age;
+        GetAge(age);
         LikesHumans = likesHumans;
     }
+    
+    public void GetAge(int age)
+    {
+        SetAge(age);
+    }
 
+    protected virtual void SetAge(int age)
+    {
+        if (age < 1)
+        {
+            Console.WriteLine("An animals age can not be less than 1.");
+            Age = 1;
+        }
+        else Age = age;
+    }
+    
+    public void Sleep()
+    {
+        Console.WriteLine($"{Name} the {Species} is sleeping...");
+    }
+    
     public abstract void DisplayAnimal();
     public abstract void MakeSound();
-    public abstract void Sleep();
     public abstract void Pet();
 }
 
@@ -28,11 +47,12 @@ public class Leopard : Animal
 {
     public int NumberOfSpots { get; set; }
 
-    public Leopard(string name, Color color, int age, bool likesHumans, int numberOfSpots) :
-        base(AnimalSpecies.Leopard, name, color, age, likesHumans)
+    public Leopard(string name, int age, Color color, bool likesHumans, int numberOfSpots) :
+        base(AnimalSpecies.Leopard, name, age, color, likesHumans)
     {
         NumberOfSpots = numberOfSpots;
     }
+    
     public override void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of his {NumberOfSpots} spots.");
@@ -42,12 +62,7 @@ public class Leopard : Animal
     {
         Console.WriteLine($"{Name} the {Species} roars!!!");
     }
-
-    public override void Sleep()
-    {
-        Console.WriteLine($"{Name} the {Species} is sleeping...");
-    }
-
+    
     public override void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to bite you!");
@@ -64,8 +79,8 @@ public class Tiger : Animal
 {
     public int NumberOfStripes { get; set; }
 
-    public Tiger(string name, Color color, int age, bool likesHumans, int numberOfStripes) :
-        base(AnimalSpecies.Tiger, name, color, age, likesHumans)
+    public Tiger(string name, int age, Color color, bool likesHumans, int numberOfStripes) :
+        base(AnimalSpecies.Tiger, name, age, color, likesHumans)
     {
         NumberOfStripes = numberOfStripes;
     }
@@ -78,11 +93,6 @@ public class Tiger : Animal
     public override void MakeSound()
     {
         Console.WriteLine($"{Name} the {Species} roars!!!");
-    }
-        
-    public override void Sleep()
-    {
-        Console.WriteLine($"{Name} the {Species} is sleeping...");
     }
     
     public override void Pet()
@@ -101,8 +111,8 @@ public class Elephant : Animal
 {
     public int Weight { get; set; }
     
-    public Elephant(string name, Color color, int age, bool likesHumans, int weight) :
-        base(AnimalSpecies.Elephant, name, color, age, likesHumans)
+    public Elephant(string name, int age, Color color, bool likesHumans, int weight) :
+        base(AnimalSpecies.Elephant, name, age, color, likesHumans)
     {
         Weight = weight;
     }
@@ -115,12 +125,7 @@ public class Elephant : Animal
     public override void MakeSound()
     {
         Console.WriteLine($"{Name} the {Species} makes a trumpet like sound!!!");
-    }
-        
-    public override void Sleep()
-    {
-        Console.WriteLine($"{Name} the {Species} is sleeping...");
-    }
+    } 
     
     public override void Pet()
     {
@@ -133,8 +138,8 @@ public class Zebra : Animal
 {
     public int Speed { get; set; }
     
-    public Zebra(string name, Color color, int age, bool likesHumans, int speed) :
-        base(AnimalSpecies.Zebra, name, color, age, likesHumans)
+    public Zebra(string name, int age, Color color, bool likesHumans, int speed) :
+        base(AnimalSpecies.Zebra, name, age, color, likesHumans)
     {
         Speed = speed;
     }
@@ -148,11 +153,6 @@ public class Zebra : Animal
     {
         Console.WriteLine($"{Name} the {Species} brays!!!");
     }
-        
-    public override void Sleep()
-    {
-        Console.WriteLine($"{Name} the {Species} is sleeping...");
-    }
     
     public override void Pet()
     {
@@ -164,8 +164,8 @@ public class Wolf : Animal
 {
     public Color EyeColor { get; set; }
     
-    public Wolf(string name, Color color, int age, bool likesHumans, Color eyeColor) :
-        base(AnimalSpecies.Wolf, name, color, age, likesHumans)
+    public Wolf(string name, int age, Color color, bool likesHumans, Color eyeColor) :
+        base(AnimalSpecies.Wolf, name, age, color, likesHumans)
     {
         EyeColor = eyeColor;
     }
@@ -179,11 +179,6 @@ public class Wolf : Animal
     {
         Console.WriteLine($"{Name} the {Species} Howls!!!");
     }
-        
-    public override void Sleep()
-    {
-        Console.WriteLine($"{Name} the {Species} is sleeping...");
-    }
     
     public override void Pet()
     {
@@ -193,37 +188,22 @@ public class Wolf : Animal
 
 public class Puppy : Wolf
 {
-    private int _age;
     public Size Size { get; set; }
 
-    public Puppy(string name, Color color, int age, bool likesHumans, Color eyeColor, Size size) :
-        base(name, color, age, likesHumans, eyeColor)
+    public Puppy(string name, int age, Color color, bool likesHumans, Color eyeColor, Size size) :
+        base(name, age, color, likesHumans, eyeColor) // Use 0 or any valid default for base class
     {
-        Name = name;
-        Color = color;
-        Age = age;
-        LikesHumans = likesHumans;
-        EyeColor = eyeColor;
         Size = size;
     }
-
-    public new int Age
+    
+    protected override void SetAge(int age)
     {
-        get => _age;
-        set
+        if (age is < 0 or > 2)
         {
-            if (value is < 0 or > 2)
-            {
-                Console.WriteLine("A puppy's age must be in the range of 0 and 2.");
-                _age = 1;
-            }
-            else _age = value;
+            Console.WriteLine("A puppy's age must be in the range of 0 and 2.");
+            Age = 1;
         }
-    }
-
-    public void PuppySize()
-    { 
-        Console.WriteLine($"{Name} the {Species} is a {Size} little Puppy");
+        else Age = age;
     }
 }
 
