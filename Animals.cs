@@ -87,7 +87,7 @@ public class Tiger : Animal
 
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of its {NumberOfStripes} spots.");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of its {NumberOfStripes} stripes.");
     }
         
     public override void MakeSound()
