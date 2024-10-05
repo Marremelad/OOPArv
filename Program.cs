@@ -8,6 +8,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Leopard leopard = new Leopard("Jack", 0, Color.Brown, true, 500);
+        Tiger tiger = new Tiger("Oliver", 0, Color.Orange, true, 500);
+
     }
 }
