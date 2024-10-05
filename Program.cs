@@ -10,10 +10,10 @@ class Program
     {
         Leopard leopard = new Leopard("Jack", 5, Color.Brown, true, 500);
         Tiger tiger = new Tiger("Oliver", 5, Color.Orange, true, 500);
+        Puppy puppy = new Puppy("Asma", 1, Color.Black, false, Color.Brown, Size.Small);
         
-        leopard.DisplayAnimal();
-        tiger.DisplayAnimal();
-        
+        puppy.DisplayAnimal();
+        puppy.DisplaySize();
 
     }
 }

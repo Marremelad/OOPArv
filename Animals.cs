@@ -205,5 +205,10 @@ public class Puppy : Wolf
         }
         else Age = age;
     }
+    
+    public void DisplaySize()
+    {
+        Console.WriteLine($"{Name} the {Species} is a {Size} puppy.");
+    }
 }
 
