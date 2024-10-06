@@ -10,10 +10,16 @@ class Program
     {
         Leopard leopard = new Leopard("Jack", 5, Color.Brown, true, 500);
         Tiger tiger = new Tiger("Oliver", 5, Color.Orange, true, 500);
+        Elephant elephant = new Elephant("Babar", 7, Color.Gray, true, 7000);
+        Zebra zebra = new Zebra("Super Zebran", 3, Color.White, true, 500);
+        Wolf wolf = new Wolf("Balto", 10, Color.Gray, true, Color.Gold);
         Puppy puppy = new Puppy("Asma", 1, Color.Black, false, Color.Brown, Size.Small);
         
-        puppy.DisplayAnimal();
+        leopard.Climb();
+        tiger.SharpenClaws();
+        elephant.SprayWater();
+        zebra.RotateEars();
+        wolf.GatherPack();
         puppy.DisplaySize();
-
     }
 }
