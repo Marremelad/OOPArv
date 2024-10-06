@@ -102,7 +102,7 @@ public class Tiger : Animal
     
     public void SharpenClaws()
     {
-        Console.WriteLine($"{Name} the {Species} is sharpening its claws");
+        Console.WriteLine($"{Name} the {Species} is sharpening its claws.");
     }
 }
 
