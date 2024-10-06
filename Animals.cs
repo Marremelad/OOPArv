@@ -131,6 +131,11 @@ public class Elephant : Animal
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to stomp on you!");
     }
+
+    public void SprayWater()
+    {
+        Console.WriteLine($"{Name} the {Species} sprays water with it's trunk!");
+    }
     
 }
 
@@ -158,6 +163,11 @@ public class Zebra : Animal
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to kick you!");
     }
+
+    public void RotateEars()
+    {
+        Console.WriteLine($"{Name} then {Species} rotates it's ears 180 degrees.");
+    }
 }
 
 public class Wolf : Animal
@@ -184,6 +194,11 @@ public class Wolf : Animal
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and growls at you!");
     }
+
+    public void GatherPack()
+    {
+        Console.WriteLine($"{Name} the {Species} gathers the pack.");
+    }
 }
 
 public class Puppy : Wolf
@@ -191,7 +206,7 @@ public class Puppy : Wolf
     public Size Size { get; set; }
 
     public Puppy(string name, int age, Color color, bool likesHumans, Color eyeColor, Size size) :
-        base(name, age, color, likesHumans, eyeColor) // Use 0 or any valid default for base class
+        base(name, age, color, likesHumans, eyeColor)
     {
         Size = size;
     }
