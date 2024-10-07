@@ -2,5 +2,7 @@
 
 public interface INonHuman
 {
+    void DisplayAnimal();
+    void Pet();
     
 }
