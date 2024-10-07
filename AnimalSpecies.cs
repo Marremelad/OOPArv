@@ -8,4 +8,6 @@ public enum AnimalSpecies
     Elephant,
     Wolf,
     Zebra,
+    Crocodile,
+    Salamander,
 }
