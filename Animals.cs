@@ -99,6 +99,7 @@ public class Elephant : NonHuman
     
 }
 
+// Zebra class.
 public class Zebra : NonHuman
 {
     private int Speed { get; set; }
@@ -130,6 +131,7 @@ public class Zebra : NonHuman
     }
 }
 
+// Wolf class.
 public class Wolf : NonHuman
 {
     private Color EyeColor { get; set; }
@@ -161,6 +163,7 @@ public class Wolf : NonHuman
     }
 }
 
+// Puppy class.
 public class Puppy : Wolf
 {
     private Size Size { get; set; }
