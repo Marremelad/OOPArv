@@ -202,7 +202,7 @@ public class Salamander : NonHuman
     private bool HasTail { get; set; }
     
     public Salamander(string name, int age, Color color, bool likesHumans, bool hasTail) :
-        base(AnimalSpecies.Crocodile, AnimalType.Reptile, name, age, color, likesHumans)
+        base(AnimalSpecies.Salamander, AnimalType.Amphibian, name, age, color, likesHumans)
     {
         HasTail = hasTail;
     }
