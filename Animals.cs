@@ -6,15 +6,13 @@ public class Animal
     public string Name { get; set; }
     protected int Age;
     public Color Color { get; set; }
-    public bool LikesHumans { get; set; }
-
-    public Animal(AnimalSpecies species, string name, int age, Color color, bool likesHumans)
+    
+    public Animal(AnimalSpecies species, string name, int age, Color color)
     {
         Species = species;
         Name = name;
         Color = color;
         GetSetter(age);
-        LikesHumans = likesHumans;
     }
 
     public int GetAge()
@@ -52,9 +50,9 @@ public class Animal
 public class Leopard : Animal, INonHuman
 {
     public int NumberOfSpots { get; set; }
-
+   
     public Leopard(string name, int age, Color color, bool likesHumans, int numberOfSpots) :
-        base(AnimalSpecies.Leopard, name, age, color, likesHumans)
+        base(AnimalSpecies.Leopard, name, age, color)
     {
         NumberOfSpots = numberOfSpots;
     }
