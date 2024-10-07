@@ -1,11 +1,11 @@
 ﻿namespace OOPArv;
 
-public class Human(string name, int age, Color color, bool likesOtherHumans)
-    : Animal(AnimalSpecies.Human, name, age, color, likesOtherHumans)
+public class Human(string name, int age, Color color)
+    : Animal(AnimalSpecies.Human, name, age, color)
 {
-    public override void Sleep()
+    public void DisplayInformation()
     {
-        Console.WriteLine($"{Name} is tired and goes home to sleep...");
+        Console.WriteLine();
     }
     
     public void Greet()
@@ -13,4 +13,8 @@ public class Human(string name, int age, Color color, bool likesOtherHumans)
         Console.WriteLine($"{Name} says hello!");
     }
     
+    public override void Sleep()
+    {
+        Console.WriteLine($"{Name} is tired and goes home to sleep...");
+    }
 }
