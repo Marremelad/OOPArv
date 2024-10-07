@@ -23,7 +23,7 @@ public class Leopard : NonHuman
 
     public override void Pet()
     {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : 
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle." : 
             $"{Name} the {Species} gets angry and tries to scratch you!");
     }
     
@@ -56,7 +56,7 @@ public class Tiger : NonHuman
     
     public override void Pet()
     {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" :
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle." :
             $"{Name} the {Species} gets angry and tries to scratch you!");
     }
     
@@ -219,13 +219,13 @@ public class Salamander : NonHuman
     
     public override void Pet()
     {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" :
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle." :
             $"{Name} the {Species} gets angry and swims away!");
     }
  
     public void CheckTail()
     {
-        Console.WriteLine(HasTail ? $"{Name} the {Species} swings it's tail around" :
+        Console.WriteLine(HasTail ? $"{Name} the {Species} swings it's tail around happily." :
             $"{Name} the {Species} has no tail. It will probably regenerate in the future.");
     }
 
