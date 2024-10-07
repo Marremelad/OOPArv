@@ -189,9 +189,43 @@ public class Crocodile : NonHuman
         Console.WriteLine($"If you try to get any closer {Name} will rip your arm off.");
     }
  
-    public void SprayWater()
+    public void Stalk()
     {
-        Console.WriteLine($"{Name} the {Species} sprays water with it's trunk!");
+        Console.WriteLine($"{Name} the {Species} peaks it's eyes above the water and stares at you.");
+    }
+    
+}
+
+// Salamander class.
+public class Salamander : NonHuman
+{
+    private int NumberOfTeeth { get; set; }
+    
+    public Salamander(string name, int age, Color color, bool likesHumans, int numberOfTeeth) :
+        base(AnimalSpecies.Crocodile, AnimalType.Reptile, name, age, color, likesHumans)
+    {
+        NumberOfTeeth = numberOfTeeth;
+    }
+    
+    public override void DisplayAnimal()
+    {
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is floating in the water..");
+    }
+        
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name} the {Species} lets out a bubbly sound!!!");
+    } 
+    
+    public override void Pet()
+    {
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" :
+            $"{Name} the {Species} gets angry and swims away!");
+    }
+ 
+    public void Dive()
+    {
+        Console.WriteLine($"{Name} the {Species} dives under water and swims away.");
     }
     
 }
