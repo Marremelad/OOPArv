@@ -1,5 +1,12 @@
 ﻿namespace OOPArv;
 
+public enum AnimalTypes
+{
+    Mammal,
+    Amphibian,
+    Reptile,
+}
+
 public enum Color
 {
     Black,
