@@ -16,6 +16,11 @@ public class Animal
         GetSetter(age);
         LikesHumans = likesHumans;
     }
+
+    public int GetAge()
+    {
+        return Age;
+    }
     
     public void GetSetter(int age)
     {
