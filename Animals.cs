@@ -163,6 +163,39 @@ public class Wolf : NonHuman
     }
 }
 
+// Crocodile class.
+public class Crocodile : NonHuman
+{
+    private int NumberOfTeeth { get; set; }
+    
+    public Crocodile(string name, int age, Color color, int numberOfTeeth) :
+        base(AnimalSpecies.Crocodile, AnimalType.Reptile, name, age, color, false)
+    {
+        NumberOfTeeth = numberOfTeeth;
+    }
+    
+    public override void DisplayAnimal()
+    {
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is resting on the river bank.");
+    }
+        
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name} the {Species} lets out a primal hiss!!!");
+    } 
+    
+    public override void Pet()
+    {
+        Console.WriteLine($"If you try to get any closer {Name} will rip your arm off.");
+    }
+ 
+    public void SprayWater()
+    {
+        Console.WriteLine($"{Name} the {Species} sprays water with it's trunk!");
+    }
+    
+}
+
 // Puppy class.
 public class Puppy : Wolf
 {
