@@ -1,6 +1,6 @@
 ﻿namespace OOPArv;
 
-public class Animal
+public abstract class Animal
 {
     public AnimalSpecies Species { get; set; }
     public string Name { get; set; }
@@ -56,10 +56,21 @@ public class Leopard : NonHuman
     {
         NumberOfSpots = numberOfSpots;
     }
-    
+
+    public override void DisplayAnimal()
+    {
+        Console.WriteLine($"{Name} the {Color} {Species} is showing of it's {NumberOfSpots} spots.");
+    }
+
     public override void MakeSound()
     {
         Console.WriteLine($"{Name} the {Species} roars!!!");
+    }
+    
+    public override void Pet()
+    {
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : 
+            $"{Name} the {Species} gets angry and tries to scratch you!");
     }
     
     public void Climb()
@@ -91,7 +102,8 @@ public class Tiger : NonHuman
     
     public override void Pet()
     {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to scratch you!");
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" :
+            $"{Name} the {Species} gets angry and tries to scratch you!");
     }
     
     public void SharpenClaws()
