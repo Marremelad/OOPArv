@@ -1,6 +1,6 @@
 ﻿namespace OOPArv;
 
-public abstract class Animal
+public class Animal
 {
     public AnimalSpecies Species { get; set; }
     public string Name { get; set; }
@@ -32,14 +32,20 @@ public abstract class Animal
         else Age = age;
     }
     
-    public void Sleep()
+    public virtual void Sleep()
     {
         Console.WriteLine($"{Name} the {Species} is sleeping...");
     }
-    
-    public abstract void DisplayAnimal();
-    public abstract void MakeSound();
-    public abstract void Pet();
+
+    public virtual void MakeSound()
+    {
+        Console.WriteLine($"{Name} the {Species} makes a sound!");
+    }
+
+    public virtual void Pet()
+    {
+        Console.WriteLine();
+    }
 }
 
 // Leopard Class.
