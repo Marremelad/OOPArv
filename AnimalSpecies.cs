@@ -2,6 +2,7 @@
 
 public enum AnimalSpecies
 {
+    Human,
     Leopard,
     Tiger,
     Elephant,
