@@ -199,17 +199,17 @@ public class Crocodile : NonHuman
 // Salamander class.
 public class Salamander : NonHuman
 {
-    private int NumberOfTeeth { get; set; }
+    private bool HasTail { get; set; }
     
-    public Salamander(string name, int age, Color color, bool likesHumans, int numberOfTeeth) :
+    public Salamander(string name, int age, Color color, bool likesHumans, bool hasTail) :
         base(AnimalSpecies.Crocodile, AnimalType.Reptile, name, age, color, likesHumans)
     {
-        NumberOfTeeth = numberOfTeeth;
+        HasTail = hasTail;
     }
     
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is floating in the water..");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is floating in the water.");
     }
         
     public override void MakeSound()
@@ -223,11 +223,17 @@ public class Salamander : NonHuman
             $"{Name} the {Species} gets angry and swims away!");
     }
  
-    public void Dive()
+    public void CheckTail()
     {
-        Console.WriteLine($"{Name} the {Species} dives under water and swims away.");
+        Console.WriteLine(HasTail ? $"{Name} the {Species} swings it's tail around" :
+            $"{Name} the {Species} has no tail. It will probably regenerate in the future.");
     }
-    
+
+    public void RegenerateTail()
+    {
+        if (HasTail) Console.WriteLine($"{Name} the {Species} already has a tail.");
+        else HasTail = true;
+    }
 }
 
 // Puppy class.
