@@ -4,13 +4,15 @@
 public abstract class Animal
 {
     protected AnimalSpecies Species { get; set; }
+    protected AnimalType AnimalType { get; set; }
     protected string Name { get; set; }
     protected int Age;
     protected Color Color { get; set; }
 
-    protected Animal(AnimalSpecies species, string name, int age, Color color)
+    protected Animal(AnimalSpecies species, AnimalType animalType, string name, int age, Color color)
     {
         Species = species;
+        AnimalType = animalType;
         Name = name;
         Color = color;
         GetSetter(age);
@@ -49,7 +51,7 @@ public abstract class Animal
 
 //Human class.
 public abstract class Human(string name, int age, Color color)
-    : Animal(AnimalSpecies.Human, name, age, color)
+    : Animal(AnimalSpecies.Human,AnimalType.Mammal, name, age, color)
 {
     protected override void SetAge(int age)
     {
@@ -78,8 +80,8 @@ public abstract class Human(string name, int age, Color color)
 }
 
 // NonHuman class.
-public abstract class NonHuman(AnimalSpecies species, string name, int age, Color color, bool likesHumans)
-    : Animal(species, name, age, color)
+public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, string name, int age, Color color, bool likesHumans)
+    : Animal(species, animalType, name, age, color)
 {
     protected bool LikesHumans { get; set; } = likesHumans;
 
