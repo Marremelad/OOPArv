@@ -6,7 +6,7 @@ public class Leopard : NonHuman
     private int NumberOfSpots { get; set; }
    
     public Leopard(string name, int age, Color color, bool likesHumans, int numberOfSpots) :
-        base(AnimalSpecies.Leopard, name, age, color, likesHumans)
+        base(AnimalSpecies.Leopard, AnimalType.Mammal ,name, age, color, likesHumans)
     {
         NumberOfSpots = numberOfSpots;
     }
@@ -39,7 +39,7 @@ public class Tiger : NonHuman
     private int NumberOfStripes { get; set; }
 
     public Tiger(string name, int age, Color color, bool likesHumans, int numberOfStripes) :
-        base(AnimalSpecies.Tiger, name, age, color, likesHumans)
+        base(AnimalSpecies.Tiger, AnimalType.Mammal, name, age, color, likesHumans)
     {
         NumberOfStripes = numberOfStripes;
     }
@@ -72,7 +72,7 @@ public class Elephant : NonHuman
     private int Weight { get; set; }
     
     public Elephant(string name, int age, Color color, bool likesHumans, int weight) :
-        base(AnimalSpecies.Elephant, name, age, color, likesHumans)
+        base(AnimalSpecies.Elephant, AnimalType.Mammal, name, age, color, likesHumans)
     {
         Weight = weight;
     }
@@ -105,7 +105,7 @@ public class Zebra : NonHuman
     private int Speed { get; set; }
     
     public Zebra(string name, int age, Color color, bool likesHumans, int speed) :
-        base(AnimalSpecies.Zebra, name, age, color, likesHumans)
+        base(AnimalSpecies.Zebra, AnimalType.Mammal, name, age, color, likesHumans)
     {
         Speed = speed;
     }
@@ -137,7 +137,7 @@ public class Wolf : NonHuman
     private Color EyeColor { get; set; }
     
     public Wolf(string name, int age, Color color, bool likesHumans, Color eyeColor) :
-        base(AnimalSpecies.Wolf, name, age, color, likesHumans)
+        base(AnimalSpecies.Wolf, AnimalType.Mammal, name, age, color, likesHumans)
     {
         EyeColor = eyeColor;
     }
