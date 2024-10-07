@@ -49,7 +49,7 @@ public class Animal
 }
 
 // Leopard Class.
-public class Leopard : Animal
+public class Leopard : Animal, INonHuman
 {
     public int NumberOfSpots { get; set; }
 
@@ -59,7 +59,7 @@ public class Leopard : Animal
         NumberOfSpots = numberOfSpots;
     }
     
-    public override void DisplayAnimal()
+    public void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of his {NumberOfSpots} spots.");
     }
@@ -69,7 +69,7 @@ public class Leopard : Animal
         Console.WriteLine($"{Name} the {Species} roars!!!");
     }
     
-    public override void Pet()
+    public void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to bite you!");
     }
@@ -81,7 +81,7 @@ public class Leopard : Animal
 }
 
 // Tiger Class.
-public class Tiger : Animal
+public class Tiger : Animal, INonHuman
 {
     public int NumberOfStripes { get; set; }
 
@@ -91,7 +91,7 @@ public class Tiger : Animal
         NumberOfStripes = numberOfStripes;
     }
 
-    public override void DisplayAnimal()
+    public void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of its {NumberOfStripes} stripes.");
     }
@@ -101,7 +101,7 @@ public class Tiger : Animal
         Console.WriteLine($"{Name} the {Species} roars!!!");
     }
     
-    public override void Pet()
+    public void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to scratch you!");
     }
@@ -113,7 +113,7 @@ public class Tiger : Animal
 }
 
 // Elephant class.
-public class Elephant : Animal
+public class Elephant : Animal, INonHuman
 {
     public int Weight { get; set; }
     
@@ -123,7 +123,7 @@ public class Elephant : Animal
         Weight = weight;
     }
     
-    public override void DisplayAnimal()
+    public void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is swinging around its weight {Weight}kg.");
     }
@@ -133,11 +133,11 @@ public class Elephant : Animal
         Console.WriteLine($"{Name} the {Species} makes a trumpet like sound!!!");
     } 
     
-    public override void Pet()
+    public void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to stomp on you!");
     }
-
+ 
     public void SprayWater()
     {
         Console.WriteLine($"{Name} the {Species} sprays water with it's trunk!");
@@ -145,7 +145,7 @@ public class Elephant : Animal
     
 }
 
-public class Zebra : Animal
+public class Zebra : Animal, INonHuman
 {
     public int Speed { get; set; }
     
@@ -155,7 +155,7 @@ public class Zebra : Animal
         Speed = speed;
     }
     
-    public override void DisplayAnimal()
+    public void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is running around at a speed of {Speed}km/h.");
     }
@@ -165,7 +165,7 @@ public class Zebra : Animal
         Console.WriteLine($"{Name} the {Species} brays!!!");
     }
     
-    public override void Pet()
+    public void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to kick you!");
     }
@@ -186,7 +186,7 @@ public class Wolf : Animal
         EyeColor = eyeColor;
     }
     
-    public override void DisplayAnimal()
+    public void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is looking at you with its {EyeColor} eyes.");
     }
@@ -196,7 +196,7 @@ public class Wolf : Animal
         Console.WriteLine($"{Name} the {Species} Howls!!!");
     }
     
-    public override void Pet()
+    public void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and growls at you!");
     }
