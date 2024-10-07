@@ -35,12 +35,12 @@ public abstract class Animal
         }
         else Age = age;
     }
-    
+
     public virtual void MakeSound()
     {
         Console.WriteLine($"{Name} the {Species} makes a sound!");
     }
-    
+
     public virtual void Sleep()
     {
         Console.WriteLine($"{Name} the {Species} is sleeping...");
@@ -48,19 +48,19 @@ public abstract class Animal
 }
 
 //Human class.
-public class Human(string name, int age, Color color)
+public abstract class Human(string name, int age, Color color)
     : Animal(AnimalSpecies.Human, name, age, color)
 {
     public void DisplayInformation()
     {
         Console.WriteLine();
     }
-    
+
     public void Greet()
     {
         Console.WriteLine($"{Name} says hello!");
     }
-    
+
     public override void Sleep()
     {
         Console.WriteLine($"{Name} is tired and goes home to sleep...");
