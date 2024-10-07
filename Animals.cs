@@ -13,11 +13,11 @@ public class Animal
         Species = species;
         Name = name;
         Color = color;
-        GetAge(age);
+        GetSetter(age);
         LikesHumans = likesHumans;
     }
     
-    public void GetAge(int age)
+    public void GetSetter(int age)
     {
         SetAge(age);
     }
