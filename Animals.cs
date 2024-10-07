@@ -22,7 +22,7 @@ public class Animal
         return Age;
     }
     
-    public void GetSetter(int age)
+    private void GetSetter(int age)
     {
         SetAge(age);
     }
