@@ -47,29 +47,19 @@ public class Animal
 }
 
 // Leopard Class.
-public class Leopard : Animal, INonHuman
+public class Leopard : NonHuman
 {
     public int NumberOfSpots { get; set; }
    
     public Leopard(string name, int age, Color color, bool likesHumans, int numberOfSpots) :
-        base(AnimalSpecies.Leopard, name, age, color)
+        base(AnimalSpecies.Leopard, name, age, color, likesHumans)
     {
         NumberOfSpots = numberOfSpots;
     }
     
-    public void DisplayAnimal()
-    {
-        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of his {NumberOfSpots} spots.");
-    }
-
     public override void MakeSound()
     {
         Console.WriteLine($"{Name} the {Species} roars!!!");
-    }
-    
-    public void Pet()
-    {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to bite you!");
     }
     
     public void Climb()
@@ -79,7 +69,7 @@ public class Leopard : Animal, INonHuman
 }
 
 // Tiger Class.
-public class Tiger : Animal, INonHuman
+public class Tiger : NonHuman
 {
     public int NumberOfStripes { get; set; }
 
@@ -89,7 +79,7 @@ public class Tiger : Animal, INonHuman
         NumberOfStripes = numberOfStripes;
     }
 
-    public void DisplayAnimal()
+    public override void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is showing of its {NumberOfStripes} stripes.");
     }
@@ -99,7 +89,7 @@ public class Tiger : Animal, INonHuman
         Console.WriteLine($"{Name} the {Species} roars!!!");
     }
     
-    public void Pet()
+    public override void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to scratch you!");
     }
@@ -111,7 +101,7 @@ public class Tiger : Animal, INonHuman
 }
 
 // Elephant class.
-public class Elephant : Animal, INonHuman
+public class Elephant : NonHuman
 {
     public int Weight { get; set; }
     
@@ -121,7 +111,7 @@ public class Elephant : Animal, INonHuman
         Weight = weight;
     }
     
-    public void DisplayAnimal()
+    public override void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is swinging around its weight {Weight}kg.");
     }
@@ -131,7 +121,7 @@ public class Elephant : Animal, INonHuman
         Console.WriteLine($"{Name} the {Species} makes a trumpet like sound!!!");
     } 
     
-    public void Pet()
+    public override void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to stomp on you!");
     }
@@ -143,7 +133,7 @@ public class Elephant : Animal, INonHuman
     
 }
 
-public class Zebra : Animal, INonHuman
+public class Zebra : NonHuman
 {
     public int Speed { get; set; }
     
@@ -153,7 +143,7 @@ public class Zebra : Animal, INonHuman
         Speed = speed;
     }
     
-    public void DisplayAnimal()
+    public override void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is running around at a speed of {Speed}km/h.");
     }
@@ -163,7 +153,7 @@ public class Zebra : Animal, INonHuman
         Console.WriteLine($"{Name} the {Species} brays!!!");
     }
     
-    public void Pet()
+    public override void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to kick you!");
     }
@@ -174,7 +164,7 @@ public class Zebra : Animal, INonHuman
     }
 }
 
-public class Wolf : Animal
+public class Wolf : NonHuman
 {
     public Color EyeColor { get; set; }
     
@@ -184,7 +174,7 @@ public class Wolf : Animal
         EyeColor = eyeColor;
     }
     
-    public void DisplayAnimal()
+    public override void DisplayAnimal()
     {
         Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is looking at you with its {EyeColor} eyes.");
     }
@@ -194,7 +184,7 @@ public class Wolf : Animal
         Console.WriteLine($"{Name} the {Species} Howls!!!");
     }
     
-    public void Pet()
+    public override void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and growls at you!");
     }
