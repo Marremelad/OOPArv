@@ -1,6 +1,6 @@
 ﻿namespace OOPArv;
 
-public enum AnimalTypes
+public enum AnimalType
 {
     Mammal,
     Amphibian,
