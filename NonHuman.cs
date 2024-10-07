@@ -1,6 +1,6 @@
 ﻿namespace OOPArv;
 
-public class NonHuman : Animal, INonHuman
+public abstract class NonHuman : Animal
 {
     public bool LikesHumans { get; set; }
 
@@ -10,13 +10,7 @@ public class NonHuman : Animal, INonHuman
         LikesHumans = likesHumans;
     }
 
-    public virtual void DisplayAnimal()
-    {
-        throw new NotImplementedException();
-    }
+    public abstract void DisplayAnimal();
 
-    public virtual void Pet()
-    {
-        throw new NotImplementedException();
-    }
+    public abstract void Pet();
 }
