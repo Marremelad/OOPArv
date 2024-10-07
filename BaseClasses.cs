@@ -51,6 +51,16 @@ public abstract class Animal
 public abstract class Human(string name, int age, Color color)
     : Animal(AnimalSpecies.Human, name, age, color)
 {
+    protected override void SetAge(int age)
+    {
+        if (age < 1)
+        {
+            Console.WriteLine("Age has to be more than 0.");
+            Age = 1;
+        }
+        else Age = age;
+    }
+    
     public void DisplayInformation()
     {
         Console.WriteLine();
