@@ -38,6 +38,22 @@ public abstract class Animal
         else Age = age;
     }
 
+    public void DisplayAnimalType()
+    {
+        switch (AnimalType)
+        {
+            case AnimalType.Mammal:
+                Console.WriteLine($"{Name} the {Species} is a mammal. Mammals are warm-blooded vertebrates that have hair or fur and produce milk to feed their young.");
+                break;
+            case AnimalType.Reptile:
+                Console.WriteLine($"{Name} the {Species} is a reptile. Reptiles are cold-blooded vertebrates that typically lay eggs and have scaly skin, which helps prevent water loss.");
+                break;
+            case AnimalType.Amphibian:
+                Console.WriteLine($"{Name} the {Species} is an amphibian. Amphibians are cold-blooded vertebrates that typically begin their life cycle in water with gills and undergo metamorphosis to develop lungs for breathing air as adults.");
+                break;
+        }
+    }
+
     public virtual void MakeSound()
     {
         Console.WriteLine($"{Name} the {Species} makes a sound!");
