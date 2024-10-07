@@ -176,7 +176,7 @@ public class Crocodile : NonHuman
     
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is resting on the river bank.");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is resting on the river bank. You can see some it's {NumberOfTeeth} teeth sticking out of it's mouth.");
     }
         
     public override void MakeSound()
