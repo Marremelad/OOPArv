@@ -1,51 +1,5 @@
 ﻿namespace OOPArv;
 
-public abstract class Animal
-{
-    public AnimalSpecies Species { get; set; }
-    public string Name { get; set; }
-    protected int Age;
-    public Color Color { get; set; }
-    
-    public Animal(AnimalSpecies species, string name, int age, Color color)
-    {
-        Species = species;
-        Name = name;
-        Color = color;
-        GetSetter(age);
-    }
-
-    public int GetAge()
-    {
-        return Age;
-    }
-    
-    private void GetSetter(int age)
-    {
-        SetAge(age);
-    }
-
-    protected virtual void SetAge(int age)
-    {
-        if (age < 1)
-        {
-            Console.WriteLine("An animals age can not be less than 1.");
-            Age = 1;
-        }
-        else Age = age;
-    }
-    
-    public virtual void MakeSound()
-    {
-        Console.WriteLine($"{Name} the {Species} makes a sound!");
-    }
-    
-    public virtual void Sleep()
-    {
-        Console.WriteLine($"{Name} the {Species} is sleeping...");
-    }
-}
-
 // Leopard Class.
 public class Leopard : NonHuman
 {
