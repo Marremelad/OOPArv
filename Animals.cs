@@ -36,12 +36,7 @@ public class Animal
         }
         else Age = age;
     }
-
-    public virtual void DisplayAnimal()
-    {
-        Console.WriteLine($"{Name} the {Color} {Species} is {Age} years old.");
-    }
-
+    
     public virtual void MakeSound()
     {
         Console.WriteLine($"{Name} the {Species} makes a sound!");
@@ -50,12 +45,6 @@ public class Animal
     public virtual void Sleep()
     {
         Console.WriteLine($"{Name} the {Species} is sleeping...");
-    }
-
-    public virtual void Pet()
-    {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle"
-            : $"{Name} the {Species} does not like to cuddle.");
     }
 }
 
