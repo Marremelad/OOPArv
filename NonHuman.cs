@@ -2,7 +2,7 @@
 
 public abstract class NonHuman : Animal
 {
-    public bool LikesHumans { get; set; }
+    protected bool LikesHumans { get; set; }
 
     public NonHuman(AnimalSpecies species, string name, int age, Color color, bool likesHumans) :
         base (species, name, age, color)
