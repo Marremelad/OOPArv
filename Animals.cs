@@ -20,7 +20,7 @@ public class Leopard : NonHuman
     {
         Console.WriteLine($"{Name} the {Species} roars!!!");
     }
-    
+
     public override void Pet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : 
