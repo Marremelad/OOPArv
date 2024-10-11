@@ -105,3 +105,20 @@ public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, str
 
     public abstract void Pet();
 }
+
+public class Plant
+{
+    public PlantSpecies Species { get; set; }
+    public Color Color { get; set; }
+
+    public Plant(PlantSpecies plantSpecies, Color color)
+    {
+        Species = plantSpecies;
+        Color = color;
+    }
+
+    public void DisplayPlant()
+    {
+        Console.WriteLine($"This {Color} {Species} is standing tall out in the sun.");
+    }
+}

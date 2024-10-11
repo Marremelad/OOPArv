@@ -11,3 +11,17 @@ public enum AnimalSpecies
     Crocodile,
     Salamander,
 }
+
+public enum PlantSpecies
+{
+    Tulip,
+    Rose,
+    Sunflower,
+    Lily,
+    Orchid,
+    Daisy,
+    Marigold,
+    Daffodil,
+    Hibiscus,
+    Jasmine,
+}
