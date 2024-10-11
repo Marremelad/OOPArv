@@ -1,6 +1,11 @@
 ﻿namespace OOPArv;
 
-public interface Interfaces
+public interface ITame
 {
-    
+    public void TryPet();
+}
+
+public interface IWild
+{
+    public void RoamWild();
 }
