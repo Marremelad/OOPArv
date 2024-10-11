@@ -106,6 +106,7 @@ public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, str
     public abstract void Pet();
 }
 
+// Plant class.
 public class Plant
 {
     public PlantSpecies Species { get; set; }
