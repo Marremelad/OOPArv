@@ -17,12 +17,6 @@ class Program
         Salamander salamander = new Salamander("Sally", 2, Color.Red, true, false);
         Puppy puppy = new Puppy("Asma", 1, Color.Black, false, Color.Brown, Size.Small);
         
-        crocodile.DisplayAnimal();
-        crocodile.Pet();
         
-        salamander.DisplayAnimal();
-        salamander.CheckTail();
-        salamander.RegenerateTail();
-        salamander.CheckTail();
     }
 }
