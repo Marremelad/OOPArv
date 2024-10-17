@@ -42,7 +42,7 @@ class Program
         salamander.CheckTail();
         Console.WriteLine(separator);
 
-        Human human = new Human("Mauricio", 26, "Student"); // Human object.
+        Human human = new Human("Mike", 23, "Student"); // Human object.
         
         human.DisplayInformation();
         human.Greet();
