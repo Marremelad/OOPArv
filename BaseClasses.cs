@@ -9,14 +9,12 @@ public abstract class Animal
     private AnimalType AnimalType { get; set; }
     protected string Name { get; set; }
     protected int Age;
-    protected Color Color { get; set; }
-
-    protected Animal(AnimalSpecies species, AnimalType animalType, string name, int age, Color color)
+    
+    protected Animal(AnimalSpecies species, AnimalType animalType, string name, int age)
     {
         Species = species;
         AnimalType = animalType;
         Name = name;
-        Color = color;
         GetSetter(age);
     }
 
@@ -68,9 +66,14 @@ public abstract class Animal
 }
 
 //Human class.
-public class Human(string name, int age, Color color)
-    : Animal(AnimalSpecies.Human,AnimalType.Mammal, name, age, color)
+public class Human : Animal
 {
+    public string? Occupation { get; set; }
+    public Human(string name, int age, string occupation) :base(AnimalSpecies.Human, AnimalType.Mammal, name, age)
+    {
+        Occupation = occupation;
+    }
+    
     protected override void SetAge(int age)
     {
         if (age < 1)
@@ -83,7 +86,7 @@ public class Human(string name, int age, Color color)
     
     public void DisplayInformation()
     {
-        Console.WriteLine($"{Name} is {Age} years old and has {Color} skin.");
+        Console.WriteLine($"{Name} is {Age} years old.");
     }
 
     public void Greet()
@@ -99,8 +102,9 @@ public class Human(string name, int age, Color color)
 
 // NonHuman class.
 public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, string name, int age, Color color)
-    : Animal(species, animalType, name, age, color)
+    : Animal(species, animalType, name, age)
 {
+    protected Color Color { get; set; }
     public abstract void DisplayAnimal();
     
     public abstract void Unique();
