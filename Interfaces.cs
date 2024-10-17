@@ -8,5 +8,8 @@ public interface ITame
 
 public interface IWild
 {
-    public void RoamWild();
+    public void RoamWild()
+    {
+        Console.WriteLine("The animal is roaming in the wild.");
+    }
 }

@@ -26,7 +26,7 @@ public class Leopard : NonHuman, IWild
         Console.WriteLine($"{Name} the {Species} climbs a tree.");
     }
 
-    public void RoamWild()
+    public override void Unique()
     {
         Climb();
     }
@@ -58,7 +58,7 @@ public class Tiger : NonHuman, IWild
         Console.WriteLine($"{Name} the {Species} is sharpening its claws.");
     }
 
-    public void RoamWild()
+    public override void Unique()
     {
         SharpenClaws();
     }
@@ -92,9 +92,14 @@ public class Elephant : NonHuman, ITame
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to stomp on you!");
     }
  
-    public void SprayWater()
+    private void SprayWater()
     {
         Console.WriteLine($"{Name} the {Species} sprays water with it's trunk!");
+    }
+
+    public override void Unique()
+    {
+        SprayWater();
     }
     
 }
@@ -125,7 +130,7 @@ public class Zebra : NonHuman, IWild
         Console.WriteLine($"{Name} then {Species} rotates it's ears 180 degrees listening for predators.");
     }
 
-    public void RoamWild()
+    public override void Unique()
     {
         RotateEars();
     }
@@ -159,9 +164,14 @@ public class Wolf : NonHuman, ITame
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and growls at you!");
     }
 
-    public void GatherPack()
+    private void GatherPack()
     {
         Console.WriteLine($"{Name} the {Species} gathers the pack.");
+    }
+
+    public override void Unique()
+    {
+        GatherPack();
     }
 }
 
@@ -190,10 +200,11 @@ public class Crocodile : NonHuman, IWild
         Console.WriteLine($"{Name} the {Species} peaks it's eyes above the water and stares at you.");
     }
 
-    public void RoamWild()
+    public override void Unique()
     {
         Stalk();
     }
+    
     
 }
 
@@ -231,11 +242,16 @@ public class Salamander : NonHuman, ITame
         Console.WriteLine(HasTail ? $"{Name} the {Species} swings it's tail around happily." :
             $"{Name} the {Species} has no tail. It will probably regenerate in the future.");
     }
-
-    public void RegenerateTail()
+    
+     void RegenerateTail()
     {
         if (HasTail) Console.WriteLine($"{Name} the {Species} already has a tail.");
         else HasTail = true;
+    }
+    
+    public override void Unique()
+    {
+        RegenerateTail();
     }
 }
 
