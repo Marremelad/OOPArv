@@ -8,6 +8,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        string separator = "------------------------------------------";
+        
         List<NonHuman> listOfAnimals =
         [
             new Leopard("Lucas", 10, Color.Yellow, 500),
@@ -16,8 +18,7 @@ class Program
             // new Zebra("Zack", 15, Color.White, 55),
             // new Wolf("Wayne", 7, Color.Black, false, Color.Blue),
             // new Puppy("Pall", 1, Color.Brown, true, Color.Gold, Size.Fat),
-            // new Crocodile("Cain", 19, Color.Green, 100),
-            // new Salamander("Sally", 2, Color.Red, true, false),
+            new Crocodile("Cain", 19, Color.Green, 100),
         ];
 
         foreach (var animal in listOfAnimals)
@@ -31,15 +32,22 @@ class Program
             if (animal is IWild wildAnimal) wildAnimal.RoamWild();
             else if (animal is ITame tameAnimal) tameAnimal.TryPet();
             
-            Console.WriteLine("------------------------------------------");
+            Console.WriteLine(separator);
         }
+        
+        Salamander salamander = new Salamander("Sally", 2, Color.Red, true, false);
+        salamander.DisplayAnimalType();
+        salamander.CheckTail();
+        salamander.Unique();
+        salamander.CheckTail();
+        Console.WriteLine(separator);
 
-        Human human = new Human("Mauricio", 26, Color.Brown);
+        Human human = new Human("Mauricio", 26, "Student");
         
         human.DisplayInformation();
         human.Greet();
         human.Sleep();
-        Console.WriteLine("------------------------------------------");
+        Console.WriteLine(separator);
 
         List<Plant> listOfPlants = new List<Plant>()
         {
@@ -51,7 +59,7 @@ class Program
         foreach (var plant in listOfPlants)
         {
             plant.DisplayPlant();
-            Console.WriteLine("------------------------------------------");
+            Console.WriteLine(separator);
         }
     }
 }
