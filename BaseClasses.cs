@@ -1,4 +1,6 @@
-﻿namespace OOPArv;
+﻿using System.Data;
+
+namespace OOPArv;
 
 // Animal class.
 public abstract class Animal
@@ -62,6 +64,11 @@ public abstract class Animal
     public virtual void Sleep()
     {
         Console.WriteLine($"{Name} the {Species} is sleeping...");
+    }
+
+    public virtual void Unique()
+    {
+        Console.WriteLine("All animals are unique in their own way!");
     }
 }
 
