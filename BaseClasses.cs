@@ -68,7 +68,7 @@ public abstract class Animal
 }
 
 //Human class.
-public abstract class Human(string name, int age, Color color)
+public class Human(string name, int age, Color color)
     : Animal(AnimalSpecies.Human,AnimalType.Mammal, name, age, color)
 {
     protected override void SetAge(int age)
