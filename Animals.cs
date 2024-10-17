@@ -1,7 +1,7 @@
 ﻿namespace OOPArv;
 
 // Leopard Class.
-public class Leopard : NonHuman
+public class Leopard : NonHuman, IWild
 {
     private int NumberOfSpots { get; set; }
    
@@ -21,21 +21,19 @@ public class Leopard : NonHuman
         Console.WriteLine($"{Name} the {Species} roars!!!");
 
     }
-
-    public override void Pet()
-    {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle." : 
-            $"{Name} the {Species} gets angry and tries to scratch you!");
-    }
-    
-    public void Climb()
+    private void Climb()
     {
         Console.WriteLine($"{Name} the {Species} climbs a tree.");
+    }
+
+    public void RoamWild()
+    {
+        Climb();
     }
 }
 
 // Tiger Class.
-public class Tiger : NonHuman
+public class Tiger : NonHuman, IWild
 {
     private int NumberOfStripes { get; set; }
 
@@ -55,20 +53,19 @@ public class Tiger : NonHuman
         Console.WriteLine($"{Name} the {Species} roars!!!");
     }
     
-    public override void Pet()
-    {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle." :
-            $"{Name} the {Species} gets angry and tries to scratch you!");
-    }
-    
-    public void SharpenClaws()
+    private void SharpenClaws()
     {
         Console.WriteLine($"{Name} the {Species} is sharpening its claws.");
+    }
+
+    public void RoamWild()
+    {
+        SharpenClaws();
     }
 }
 
 // Elephant class.
-public class Elephant : NonHuman
+public class Elephant : NonHuman, ITame
 {
     private int Weight { get; set; }
     
@@ -88,7 +85,7 @@ public class Elephant : NonHuman
         Console.WriteLine($"{Name} the {Species} makes a trumpet like sound!!!");
     } 
     
-    public override void Pet()
+    public void TryPet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to stomp on you!");
     }
@@ -101,7 +98,7 @@ public class Elephant : NonHuman
 }
 
 // Zebra class.
-public class Zebra : NonHuman
+public class Zebra : NonHuman, IWild
 {
     private int Speed { get; set; }
     
@@ -121,19 +118,19 @@ public class Zebra : NonHuman
         Console.WriteLine($"{Name} the {Species} brays!!!");
     }
     
-    public override void Pet()
+    private void RotateEars()
     {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to kick you!");
+        Console.WriteLine($"{Name} then {Species} rotates it's ears 180 degrees listening for predators.");
     }
 
-    public void RotateEars()
+    public void RoamWild()
     {
-        Console.WriteLine($"{Name} then {Species} rotates it's ears 180 degrees.");
+        RotateEars();
     }
 }
 
 // Wolf class.
-public class Wolf : NonHuman
+public class Wolf : NonHuman, ITame
 {
     private Color EyeColor { get; set; }
     
@@ -153,7 +150,7 @@ public class Wolf : NonHuman
         Console.WriteLine($"{Name} the {Species} Howls!!!");
     }
     
-    public override void Pet()
+    public void TryPet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and growls at you!");
     }
@@ -165,7 +162,7 @@ public class Wolf : NonHuman
 }
 
 // Crocodile class.
-public class Crocodile : NonHuman
+public class Crocodile : NonHuman, IWild
 {
     private int NumberOfTeeth { get; set; }
     
@@ -185,20 +182,20 @@ public class Crocodile : NonHuman
         Console.WriteLine($"{Name} the {Species} lets out a primal hiss!!!");
     } 
     
-    public override void Pet()
-    {
-        Console.WriteLine($"If you try to get any closer {Name} will rip your arm off.");
-    }
- 
-    public void Stalk()
+    private void Stalk()
     {
         Console.WriteLine($"{Name} the {Species} peaks it's eyes above the water and stares at you.");
+    }
+
+    public void RoamWild()
+    {
+        Stalk();
     }
     
 }
 
 // Salamander class.
-public class Salamander : NonHuman
+public class Salamander : NonHuman, ITame
 {
     private bool HasTail { get; set; }
     
@@ -218,7 +215,7 @@ public class Salamander : NonHuman
         Console.WriteLine($"{Name} the {Species} lets out a bubbly sound!!!");
     } 
     
-    public override void Pet()
+    public void TryPet()
     {
         Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle." :
             $"{Name} the {Species} gets angry and swims away!");
