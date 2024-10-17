@@ -5,8 +5,8 @@ public class Leopard : NonHuman, IWild
 {
     private int NumberOfSpots { get; set; }
    
-    public Leopard(string name, int age, Color color, bool likesHumans, int numberOfSpots) :
-        base(AnimalSpecies.Leopard, AnimalType.Mammal ,name, age, color, likesHumans)
+    public Leopard(string name, int age, Color color, int numberOfSpots) :
+        base(AnimalSpecies.Leopard, AnimalType.Mammal ,name, age, color)
     {
         NumberOfSpots = numberOfSpots;
     }
@@ -37,8 +37,8 @@ public class Tiger : NonHuman, IWild
 {
     private int NumberOfStripes { get; set; }
 
-    public Tiger(string name, int age, Color color, bool likesHumans, int numberOfStripes) :
-        base(AnimalSpecies.Tiger, AnimalType.Mammal, name, age, color, likesHumans)
+    public Tiger(string name, int age, Color color, int numberOfStripes) :
+        base(AnimalSpecies.Tiger, AnimalType.Mammal, name, age, color)
     {
         NumberOfStripes = numberOfStripes;
     }
@@ -68,11 +68,13 @@ public class Tiger : NonHuman, IWild
 public class Elephant : NonHuman, ITame
 {
     private int Weight { get; set; }
+    public bool LikesHumans { get; set; }   
     
     public Elephant(string name, int age, Color color, bool likesHumans, int weight) :
-        base(AnimalSpecies.Elephant, AnimalType.Mammal, name, age, color, likesHumans)
+        base(AnimalSpecies.Elephant, AnimalType.Mammal, name, age, color)
     {
         Weight = weight;
+        LikesHumans = likesHumans;
     }
     
     public override void DisplayAnimal()
@@ -102,8 +104,8 @@ public class Zebra : NonHuman, IWild
 {
     private int Speed { get; set; }
     
-    public Zebra(string name, int age, Color color, bool likesHumans, int speed) :
-        base(AnimalSpecies.Zebra, AnimalType.Mammal, name, age, color, likesHumans)
+    public Zebra(string name, int age, Color color, int speed) :
+        base(AnimalSpecies.Zebra, AnimalType.Mammal, name, age, color)
     {
         Speed = speed;
     }
@@ -133,11 +135,13 @@ public class Zebra : NonHuman, IWild
 public class Wolf : NonHuman, ITame
 {
     private Color EyeColor { get; set; }
+    public bool LikesHumans { get; set; }
     
     public Wolf(string name, int age, Color color, bool likesHumans, Color eyeColor) :
-        base(AnimalSpecies.Wolf, AnimalType.Mammal, name, age, color, likesHumans)
+        base(AnimalSpecies.Wolf, AnimalType.Mammal, name, age, color)
     {
         EyeColor = eyeColor;
+        LikesHumans = likesHumans;
     }
     
     public override void DisplayAnimal()
@@ -165,9 +169,8 @@ public class Wolf : NonHuman, ITame
 public class Crocodile : NonHuman, IWild
 {
     private int NumberOfTeeth { get; set; }
-    
     public Crocodile(string name, int age, Color color, int numberOfTeeth) :
-        base(AnimalSpecies.Crocodile, AnimalType.Reptile, name, age, color, false)
+        base(AnimalSpecies.Crocodile, AnimalType.Reptile, name, age, color)
     {
         NumberOfTeeth = numberOfTeeth;
     }
@@ -198,11 +201,13 @@ public class Crocodile : NonHuman, IWild
 public class Salamander : NonHuman, ITame
 {
     private bool HasTail { get; set; }
+    public bool LikesHumans { get; set; }
     
     public Salamander(string name, int age, Color color, bool likesHumans, bool hasTail) :
-        base(AnimalSpecies.Salamander, AnimalType.Amphibian, name, age, color, likesHumans)
+        base(AnimalSpecies.Salamander, AnimalType.Amphibian, name, age, color)
     {
         HasTail = hasTail;
+        LikesHumans = likesHumans;
     }
     
     public override void DisplayAnimal()
