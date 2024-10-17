@@ -1,6 +1,4 @@
-﻿using System.Data;
-
-namespace OOPArv;
+﻿namespace OOPArv;
 
 // Animal class.
 public abstract class Animal
@@ -101,10 +99,14 @@ public class Human : Animal
 }
 
 // NonHuman class.
-public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, string name, int age, Color color)
-    : Animal(species, animalType, name, age)
+public abstract class NonHuman : Animal
 {
     protected Color Color { get; set; }
+
+    public NonHuman(AnimalSpecies species, AnimalType animalType, string name, int age, Color color) : base(species, animalType, name, age)
+    {
+        Color = color;
+    }
     public abstract void DisplayAnimal();
     
     public abstract void Unique();
