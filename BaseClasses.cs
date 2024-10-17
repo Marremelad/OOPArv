@@ -99,8 +99,6 @@ public abstract class Human(string name, int age, Color color)
 public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, string name, int age, Color color, bool likesHumans)
     : Animal(species, animalType, name, age, color)
 {
-    protected bool LikesHumans { get; set; } = likesHumans;
-
     public abstract void DisplayAnimal();
 }
 

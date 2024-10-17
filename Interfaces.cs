@@ -2,6 +2,7 @@
 
 public interface ITame
 {
+    public bool LikesHumans { get; set; }
     public void TryPet();
 }
 
