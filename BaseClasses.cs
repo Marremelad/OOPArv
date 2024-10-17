@@ -102,8 +102,6 @@ public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, str
     protected bool LikesHumans { get; set; } = likesHumans;
 
     public abstract void DisplayAnimal();
-
-    public abstract void Pet();
 }
 
 // Plant class.
