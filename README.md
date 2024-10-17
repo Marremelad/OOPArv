@@ -6,7 +6,7 @@ This program was made with the purpose of learning inheritance. The program feat
 ### Features
 The program simply outputs text based on some parameters in Program.cs.
 
-### Console Output
+### Console output
 ```console
 Lucas the Leopard is a mammal. Mammals are warm-blooded vertebrates that have hair or fur and produce milk to feed their young.
 Lucas the Yellow Leopard is showing off its 500 spots.
