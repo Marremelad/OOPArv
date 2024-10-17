@@ -8,7 +8,7 @@ class Program
 {
     static void Main(string[] args) // Main entry point of the program.
     {
-        string separator = "------------------------------------------."; // Separator for console output.
+        string separator = "------------------------------------------"; // Separator for console output.
         
         List<NonHuman> listOfAnimals = // List of NonHuman animals.
         [
