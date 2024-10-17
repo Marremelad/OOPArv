@@ -49,7 +49,7 @@ This Gold Daisy is standing tall out in the sun.
 * .NET 8 or higher
 
 ### Get started
-If you are using Visual Studio or any other IDE with an integrated repo-cloning function use it with this URL - https://github.com/Marremelad/OOPArv
+If you are using Visual Studio or any other IDE with an integrated repo-cloning function use it with this URL - https://github.com/Marremelad/OOPArv.git
 then open the solution and run the program.
 
 Else, do the following.
