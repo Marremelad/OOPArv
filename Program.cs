@@ -22,14 +22,35 @@ class Program
 
         foreach (var animal in listOfAnimals)
         {
-            if (animal is IWild wildAnimal) wildAnimal.RoamWild();
-            else if (animal is ITame tameAnimal) tameAnimal.TryPet();
-            
             animal.DisplayAnimalType();
             animal.DisplayAnimal();
             animal.Sleep();
             animal.MakeSound();
             animal.Unique();
+            
+            if (animal is IWild wildAnimal) wildAnimal.RoamWild();
+            else if (animal is ITame tameAnimal) tameAnimal.TryPet();
+            
+            Console.WriteLine("------------------------------------------");
+        }
+
+        Human human = new Human("Mauricio", 26, Color.Brown);
+        
+        human.DisplayInformation();
+        human.Greet();
+        human.Sleep();
+        Console.WriteLine("------------------------------------------");
+
+        List<Plant> listOfPlants = new List<Plant>()
+        {
+            new Plant(PlantSpecies.Orchid, Color.White),
+            new Plant(PlantSpecies.Sunflower, Color.Yellow),
+            new Plant(PlantSpecies.Daisy, Color.Gold)
+        };
+
+        foreach (var plant in listOfPlants)
+        {
+            plant.DisplayPlant();
             Console.WriteLine("------------------------------------------");
         }
     }
