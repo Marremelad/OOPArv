@@ -4,7 +4,7 @@
 This program was made with the purpose of further learning classes and inheritance. The program features an Animal base class and a few other classes that inherit from it.
 
 ### Features
-The program simply outputs text based on some parameters in Program.cs
+The program simply outputs text based on some parameters in Program.cs.
 
 ### Console Output
 ```console
