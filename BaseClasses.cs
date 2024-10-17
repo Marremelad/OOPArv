@@ -81,7 +81,7 @@ public abstract class Human(string name, int age, Color color)
     
     public void DisplayInformation()
     {
-        Console.WriteLine();
+        Console.WriteLine($"{Name} is {Age} years old and has {color} skin.");
     }
 
     public void Greet()
