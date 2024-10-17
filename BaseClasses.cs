@@ -96,7 +96,7 @@ public abstract class Human(string name, int age, Color color)
 }
 
 // NonHuman class.
-public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, string name, int age, Color color, bool likesHumans)
+public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, string name, int age, Color color)
     : Animal(species, animalType, name, age, color)
 {
     public abstract void DisplayAnimal();
