@@ -89,7 +89,8 @@ public class Elephant : NonHuman, ITame
     
     public void TryPet()
     {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and tries to stomp on you!");
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle." :
+            $"{Name} the {Species} gets angry and tries to stomp on you!");
     }
  
     private void SprayWater()
@@ -161,7 +162,8 @@ public class Wolf : NonHuman, ITame
     
     public void TryPet()
     {
-        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle" : $"{Name} the {Species} gets angry and growls at you!");
+        Console.WriteLine(LikesHumans ? $"{Name} the {Species} likes to cuddle." :
+            $"{Name} the {Species} gets angry and growls at you!");
     }
 
     private void GatherPack()
