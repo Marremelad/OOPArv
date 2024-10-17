@@ -4,7 +4,7 @@
 public abstract class Animal
 {
     protected AnimalSpecies Species { get; set; }
-    protected AnimalType AnimalType { get; set; }
+    private AnimalType AnimalType { get; set; }
     protected string Name { get; set; }
     protected int Age;
     protected Color Color { get; set; }
