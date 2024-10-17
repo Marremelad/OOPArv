@@ -79,7 +79,7 @@ public class Elephant : NonHuman, ITame
     
     public override void DisplayAnimal()
     {
-        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is swinging around its weight {Weight}kg.");
+        Console.WriteLine($"{Name} the {Age} year old {Color} colored {Species} is walking around. He weighs {Weight}kg.");
     }
         
     public override void MakeSound()
