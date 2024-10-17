@@ -65,11 +65,6 @@ public abstract class Animal
     {
         Console.WriteLine($"{Name} the {Species} is sleeping...");
     }
-
-    public virtual void Unique()
-    {
-        Console.WriteLine("All animals are unique in their own way!");
-    }
 }
 
 //Human class.
@@ -107,6 +102,8 @@ public abstract class NonHuman(AnimalSpecies species, AnimalType animalType, str
     : Animal(species, animalType, name, age, color)
 {
     public abstract void DisplayAnimal();
+    
+    public abstract void Unique();
 }
 
 // Plant class.
