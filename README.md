@@ -33,9 +33,9 @@ Sally the Salamander is an amphibian. Amphibians are cold-blooded vertebrates th
 Sally the Salamander has no tail. It will probably regenerate in the future.
 Sally the Salamander swings its tail around happily.
 ------------------------------------------
-Mauricio the Student is 26 years old.
-Mauricio says hello!
-Mauricio is tired and goes home to sleep...
+Mike the Student is 23 years old.
+Mike says hello!
+Mike is tired and goes home to sleep...
 ------------------------------------------
 This White Orchid is standing tall out in the sun.
 ------------------------------------------
