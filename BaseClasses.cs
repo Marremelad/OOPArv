@@ -84,7 +84,7 @@ public class Human : Animal
     
     public void DisplayInformation()
     {
-        Console.WriteLine($"{Name} is {Age} years old.");
+        Console.WriteLine($"{Name} the {Occupation} is {Age} years old.");
     }
 
     public void Greet()
