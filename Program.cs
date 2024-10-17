@@ -30,6 +30,7 @@ class Program
             animal.Sleep();
             animal.MakeSound();
             animal.Unique();
+            Console.WriteLine("------------------------------------------");
         }
     }
 }
